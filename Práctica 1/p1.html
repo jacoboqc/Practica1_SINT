@@ -5,7 +5,7 @@
 	<body>
 		<h1>Formulario de registro de nuevo usuario</h1>
 		Rellene los campos a continuaci&oacuten para formalizar su registro.<br>
-		<form action="p1.php" method="get" enctype="application/x-www-form-urlencoded">
+		<form action="accion" id="form" method="metodo" enctype="encriptacion">
 			Nombre<br>
 			<input type="text" name="nombre"><br>
 			Apellidos<br>
@@ -36,11 +36,19 @@
 			<input type="radio" name="disc" value="otro">Otros <input type="text" name="otro"><br>
 			Informaci&oacuten personal<br>
 			<textarea rows="10" cols="25" maxlength="140"></textarea><br>
+			(M&aacuteximo 140 caracteres)<br>
 			<input type="checkbox" value="terminos"> Has le&iacutedo y aceptas los t&eacuterminos y condiciones de uso?<br>
 			<br>
 			<input type="submit" value="enviar">
-			<input type="reset" value="borrar">
+			<input type="reset" value="borrar"><br>
+			<B>Selecciona como quieres enviar el formulario:</B><br>
+			<input type="radio" name="meth" id="methp" value="p" checked>POST
+			<input type="radio" name="meth" id="methg" value="g">GET<br>
+			<input type="radio" name="enc" id="enca" value="app" checked>application/x-www-form-urlencoded
+			<input type="radio" name="enc" id="encm" value="multi">multipart/form-data<br>
+			<input type="radio" name="php" id="php1" value="p1" checked>p1.php
+			<input type="radio" name="php" id="phprof" value="prof">/~sintprof/p1.php<br>
+			<script type="text/javaScript" src="p1.js"></script>
 		</form>
-		<script type="text/javaScript" src="p1.js"></script>
 	</body>
 </html>
