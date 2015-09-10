@@ -13,11 +13,11 @@
 			Tel&eacutefono<br>
 			<input type="text" name="telef"><br>
 			Correo electr&oacutenico<br>
-			<input type="email" name="email"><br>
+			<input type="text" name="email" value="@"><br>
 			Contrase&ntildea<br>
 			<input type="password" name="pass"><br>
 			Sexo<br>
-			<input type="radio" name="sexo" value="m" checked>Hombre<br>
+			<input type="radio" name="sexo" value="m">Hombre<br>
 			<input type="radio" name="sexo" value="f">Mujer<br>
 			Edad<br>
 			<select type="edad">
@@ -30,25 +30,25 @@
 				<option value="24">24</option><br>
 			</select><br>
 			Como nos has conocido?<br>
-			<input type="radio" name="disc" value="amigo" checked>Amigos<br>
-			<input type="radio" name="disc" value="escuela">Escuela<br>
-			<input type="radio" name="disc" value="int">Internet<br>
-			<input type="radio" name="disc" value="otro">Otros <input type="text" name="otro"><br>
+			<input type="checkbox" name="disc" value="amigo">Amigos<br>
+			<input type="checkbox" name="disc" value="escuela">Escuela<br>
+			<input type="checkbox" name="disc" value="int">Internet<br>
 			Informaci&oacuten personal<br>
-			<textarea rows="10" cols="25" maxlength="140"></textarea><br>
+			<textarea rows="10" cols="25" maxlength="140">Escriba sobre usted aqu&iacute... </textarea><br>
 			(M&aacuteximo 140 caracteres)<br>
-			<input type="checkbox" value="terminos"> Has le&iacutedo y aceptas los t&eacuterminos y condiciones de uso?<br>
-			<br>
-			<input type="submit" value="enviar">
-			<input type="reset" value="borrar"><br>
+			<input type="checkbox" value="terminos"> Has le&iacutedo y aceptas los <a href="troll.txt">t&eacuterminos y condiciones de uso</a>?<br><br>
 			<B>Selecciona como quieres enviar el formulario:</B><br>
 			<input type="radio" name="meth" id="methp" value="p" checked>POST
 			<input type="radio" name="meth" id="methg" value="g">GET<br>
-			<input type="radio" name="enc" id="enca" value="app" checked>application/x-www-form-urlencoded
+			<input type="radio" name="enc" id="enca" value="app">application/x-www-form-urlencoded
 			<input type="radio" name="enc" id="encm" value="multi">multipart/form-data<br>
-			<input type="radio" name="php" id="php1" value="p1" checked>p1.php
+			<input type="radio" name="php" id="php1" value="p1">p1.php
 			<input type="radio" name="php" id="phprof" value="prof">/~sintprof/p1.php<br>
-			<script type="text/javaScript" src="p1.js"></script>
+			<input type="hidden" id="hora" value="hora">
+			<input type="hidden" id="naveg" value="navegador">
+			<input type="submit" value="enviar">
+			<input type="reset" value="borrar">
 		</form>
+	<script type="text/javascript" src="p1.js"></script>
 	</body>
 </html>
