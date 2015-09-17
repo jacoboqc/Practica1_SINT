@@ -1,18 +1,32 @@
-var atrib=document.getElementById("form");
-if(document.getElementById("methp").checked){
-	atrib.method="post";
-}else{
-	atrib.method="get";
+function options (){
+
+	if(document.getElementById("methp").checked){
+		document.getElementById("formulario").method="post";
+	}else{
+		document.getElementById("formulario").method="get";
+	}
+	if(document.getElementById("enca").checked){
+		document.getElementById("formulario").enctype="application/x-www-form-urlencoded";
+	}else{
+		document.getElementById("formulario").enctype="multipart/form-data";
+	}
+	if(document.getElementById("php1").checked){
+		document.getElementById("formulario").action="p1.php";
+	}else{
+		document.getElementById("formulario").action="/~sintprof/p1.php";
+	}
+
 }
-if(document.getElementById("enca").checked){
-	atrib.enctype="application/x-www-form-urlencoded";
-}else{
-	atrib.enctype="multipart/form-data";
+
+function checkMeth (){
+	
+	if(document.getElementById("methg").checked){
+		document.getElementById("encm").checked=false;
+		document.getElementById("enca").checked=true;
+		document.getElementById("encm").disabled=true;
+	}
+	if(document.getElementById("methp").checked){
+		document.getElementById("encm").disabled=false;
+	}
+
 }
-if(document.getElementById("php1").checked){
-	atrib.action="p1.php";
-}else{
-	atrib.action="/~sintprof/p1.php";
-}
-var fecha = new Date();
-document.getElementById("hora").value=fecha.toString;

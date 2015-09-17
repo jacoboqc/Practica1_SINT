@@ -1,11 +1,13 @@
 <html>
 	<head>
+ 		<meta charset="UTF-8">
 		<title>Formulario de registro</title>
+		<script type="text/javascript" src="p1.js"></script>
 	</head>
 	<body>
 		<h1>Formulario de registro de nuevo usuario</h1>
 		Rellene los campos a continuaci&oacuten para formalizar su registro.<br>
-		<form action="accion" id="form" method="metodo" enctype="encriptacion">
+		<form value="form"  id="formulario" onSubmit="options()">
 			Nombre<br>
 			<input type="text" name="nombre"><br>
 			Apellidos<br>
@@ -38,8 +40,8 @@
 			(M&aacuteximo 140 caracteres)<br>
 			<input type="checkbox" value="terminos"> Has le&iacutedo y aceptas los <a href="troll.txt">t&eacuterminos y condiciones de uso</a>?<br><br>
 			<B>Selecciona como quieres enviar el formulario:</B><br>
-			<input type="radio" name="meth" id="methp" value="p" checked>POST
-			<input type="radio" name="meth" id="methg" value="g">GET<br>
+			<input type="radio" name="meth" id="methp" onclick="checkMeth()" value="p" checked>POST
+			<input type="radio" name="meth" id="methg" onclick="checkMeth()" value="g">GET<br>
 			<input type="radio" name="enc" id="enca" value="app">application/x-www-form-urlencoded
 			<input type="radio" name="enc" id="encm" value="multi">multipart/form-data<br>
 			<input type="radio" name="php" id="php1" value="p1">p1.php
@@ -49,6 +51,5 @@
 			<input type="submit" value="enviar">
 			<input type="reset" value="borrar">
 		</form>
-	<script type="text/javascript" src="p1.js"></script>
 	</body>
 </html>
