@@ -29,4 +29,11 @@ function checkMeth (){
 		document.getElementById("encm").disabled=false;
 	}
 
+}function terms (){
+	
+	if(!document.getElementById("termns").checked){
+		alert("Debes leer y aceptar los términos y condiciones de uso");
+		return false;
+	}
+	
 }

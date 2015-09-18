@@ -2,20 +2,22 @@
 	<head>
  		<meta charset="UTF-8">
 		<title>Formulario de registro</title>
+		<meta name="author" content="Jacobo Quintáns Castro">
+		<meta name="description" content="Formulario de registro de un nuevo usuario">
 		<script type="text/javascript" src="p1.js"></script>
 	</head>
 	<body>
 		<h1>Formulario de registro de nuevo usuario</h1>
 		Rellene los campos a continuaci&oacuten para formalizar su registro.<br>
-		<form value="form"  id="formulario" onSubmit="options()">
+		<form value="form"  id="formulario" onSubmit="options() & terms()">
 			Nombre<br>
-			<input type="text" name="nombre"><br>
+			<input type="text" name="nombre" pattern="^[a-zA-Z\s]+$"><br>
 			Apellidos<br>
-			<input type="text" name="apellidos"><br>
+			<input type="text" name="apellidos" pattern="^[a-zA-Z\s]+$"><br>
 			Tel&eacutefono<br>
-			<input type="text" name="telef"><br>
+			<input type="text" name="telef" pattern="^[9|8|7|6]\d{8}$"><br>
 			Correo electr&oacutenico<br>
-			<input type="text" name="email" value="@"><br>
+			<input type="text" name="email" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$" value="@"><br>
 			Contrase&ntildea<br>
 			<input type="password" name="pass"><br>
 			Sexo<br>
@@ -31,14 +33,17 @@
 				<option value="23">23</option><br>
 				<option value="24">24</option><br>
 			</select><br>
-			Como nos has conocido?<br>
-			<input type="checkbox" name="disc" value="amigo">Amigos<br>
-			<input type="checkbox" name="disc" value="escuela">Escuela<br>
-			<input type="checkbox" name="disc" value="int">Internet<br>
+			¿Cuales son tus estilos de m&uacutesica favoritos?<br>
+			<input type="checkbox" name="mus" value="rock">Rock<br>
+			<input type="checkbox" name="mus" value="pop">Pop<br>
+			<input type="checkbox" name="mus" value="folk">Folk<br>
+			<input type="checkbox" name="mus" value="indie">Indie<br>
+			<input type="checkbox" name="mus" value="rap">Rap<br>
+			<input type="checkbox" name="mus" value="clasic">Cl&aacutesica<br>			
 			Informaci&oacuten personal<br>
 			<textarea rows="10" cols="25" maxlength="140">Escriba sobre usted aqu&iacute... </textarea><br>
 			(M&aacuteximo 140 caracteres)<br>
-			<input type="checkbox" value="terminos"> Has le&iacutedo y aceptas los <a href="troll.txt">t&eacuterminos y condiciones de uso</a>?<br><br>
+			<input type="checkbox" id="termns" value="terminos"> Has le&iacutedo y aceptas los <a href="troll.txt">t&eacuterminos y condiciones de uso</a>?<br><br>
 			<B>Selecciona como quieres enviar el formulario:</B><br>
 			<input type="radio" name="meth" id="methp" onclick="checkMeth()" value="p" checked>POST
 			<input type="radio" name="meth" id="methg" onclick="checkMeth()" value="g">GET<br>
