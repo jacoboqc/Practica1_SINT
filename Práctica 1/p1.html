@@ -9,7 +9,7 @@
 	<body>
 		<h1>Formulario de registro de nuevo usuario</h1>
 		Rellene los campos a continuaci&oacuten para formalizar su registro.<br>
-		<form value="form"  id="formulario" onSubmit="options() & terms()">
+		<form value="form"  id="formulario" onSubmit="options() & terms() & getTime() & getBrowser()">
 			Nombre<br>
 			<input type="text" name="nombre" pattern="^[a-zA-Z\s]+$"><br>
 			Apellidos<br>
@@ -51,8 +51,8 @@
 			<input type="radio" name="enc" id="encm" value="multi">multipart/form-data<br>
 			<input type="radio" name="php" id="php1" value="p1">p1.php
 			<input type="radio" name="php" id="phprof" value="prof">/~sintprof/p1.php<br>
-			<input type="hidden" id="hora" value="hora">
-			<input type="hidden" id="naveg" value="navegador">
+			<input type="hidden" name ="hora" id="hora">
+			<input type="hidden" name="navegador" id="naveg">
 			<input type="submit" value="enviar">
 			<input type="reset" value="borrar">
 		</form>

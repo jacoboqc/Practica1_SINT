@@ -37,3 +37,23 @@ function checkMeth (){
 	}
 	
 }
+
+function getTime (){
+	
+	var fecha=new Date();
+	var hrs=fecha.getHours();
+	var mnts=fecha.getMinutes();
+	var hora=hrs + ":" + mnts + " ";
+	if(hrs > 11){
+		hora=hora + "PM";
+	}else{
+		hora=hora + "AM";
+	}
+	document.getElementById("hora").value=hora;
+}
+
+function getBrowser (){
+	
+	document.getElementById("naveg").value=navigator.appCodeName + navigator.appVersion;
+	
+}
