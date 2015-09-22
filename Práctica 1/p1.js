@@ -29,12 +29,35 @@ function checkMeth (){
 		document.getElementById("encm").disabled=false;
 	}
 
-}function terms (){
+}
+
+function toSubmit(){
+	
+	options();
+	getTime();
+	getBrowser();
+	var goRNot=true;
+	if(!mustMatch() || !terms()){
+		goRNot=false;
+	}
+	return goRNot;
+	
+}
+
+function mustMatch (){
+	
+	if(document.getElementById("pass1").value!=document.getElementById("pass2").value){
+		alert("La contraseña no es idéntica");
+		return false;
+	}else{return true;}
+}
+
+function terms (){
 	
 	if(!document.getElementById("termns").checked){
 		alert("Debes leer y aceptar los términos y condiciones de uso");
 		return false;
-	}
+	}else{return true;}
 	
 }
 
@@ -43,6 +66,9 @@ function getTime (){
 	var fecha=new Date();
 	var hrs=fecha.getHours();
 	var mnts=fecha.getMinutes();
+	if(mnts<10) {
+		mnts="0" + mnts;
+	}
 	var hora=hrs + ":" + mnts + " ";
 	if(hrs > 11){
 		hora=hora + "PM";
