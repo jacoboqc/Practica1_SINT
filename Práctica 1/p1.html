@@ -8,24 +8,26 @@
 	</head>
 	<body>
 		<h1>Formulario de registro de nuevo usuario</h1>
-		Rellene los campos a continuaci&oacuten para formalizar su registro.<br>
-		<form value="form"  id="formulario" onSubmit="options() & terms() & getTime() & getBrowser()">
+		Rellene los campos a continuación para formalizar su registro.<br>
+		<form value="form"  id="formulario" onSubmit="return toSubmit();">
 			Nombre<br>
-			<input type="text" name="nombre" pattern="^[a-zA-Z\s]+$"><br>
+			<input type="text" name="nombre" pattern="^[a-zA-Z\s]+$"><font size="2"> (Letras sin símbolos)</font><br>
 			Apellidos<br>
-			<input type="text" name="apellidos" pattern="^[a-zA-Z\s]+$"><br>
-			Tel&eacutefono<br>
-			<input type="text" name="telef" pattern="^[9|8|7|6]\d{8}$"><br>
-			Correo electr&oacutenico<br>
-			<input type="text" name="email" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$" value="@"><br>
-			Contrase&ntildea<br>
-			<input type="password" name="pass"><br>
+			<input type="text" name="apellidos" pattern="^[a-zA-Z\s]+$"><font size="2"> (Letras sin símbolos)</font><br>
+			Teléfono<br>
+			<input type="text" name="telef" pattern="^[9|8|7|6]\d{8}$"><font size="2"> (Número de 9 cifras)</font><br>
+			Correo electrónico<br>
+			<input type="text" name="email" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$"><font size="2"> (nombre@dominio.es)</font><br>
+			Contraseña<br>
+			<input type="password" name="pass" id="pass1"><br>
+			Vuelva a introducir su contraseña<br>
+			<input type="password" id="pass2"><br>
 			Sexo<br>
 			<input type="radio" name="sexo" value="m">Hombre<br>
 			<input type="radio" name="sexo" value="f">Mujer<br>
 			Edad<br>
-			<select type="edad">
-				<option value="18" selected>18</option><br> 
+			<select name="edad">
+				<option value="18">18</option><br> 
 				<option value="19">19</option><br>
 				<option value="20">20</option><br>
 				<option value="21">21</option><br>
@@ -33,17 +35,17 @@
 				<option value="23">23</option><br>
 				<option value="24">24</option><br>
 			</select><br>
-			¿Cuales son tus estilos de m&uacutesica favoritos?<br>
+			¿Cuales son tus estilos de música favoritos?<br>
 			<input type="checkbox" name="mus" value="rock">Rock<br>
 			<input type="checkbox" name="mus" value="pop">Pop<br>
 			<input type="checkbox" name="mus" value="folk">Folk<br>
 			<input type="checkbox" name="mus" value="indie">Indie<br>
 			<input type="checkbox" name="mus" value="rap">Rap<br>
-			<input type="checkbox" name="mus" value="clasic">Cl&aacutesica<br>			
-			Informaci&oacuten personal<br>
-			<textarea rows="10" cols="25" maxlength="140">Escriba sobre usted aqu&iacute... </textarea><br>
-			(M&aacuteximo 140 caracteres)<br>
-			<input type="checkbox" id="termns" value="terminos"> Has le&iacutedo y aceptas los <a href="troll.txt">t&eacuterminos y condiciones de uso</a>?<br><br>
+			<input type="checkbox" name="mus" value="clasic">Clásica<br>			
+			Información personal<br>
+			<textarea rows="10" cols="25" maxlength="140" name="info">Escriba sobre usted aquí... </textarea><br>
+			<font size="2">(Máximo 140 caracteres)</font><br>
+			<input type="checkbox" id="termns" value="terminos"> Has leído y aceptas los <a href="troll.txt" target="_blank">términos y condiciones de uso</a>?<br><br>
 			<B>Selecciona como quieres enviar el formulario:</B><br>
 			<input type="radio" name="meth" id="methp" onclick="checkMeth()" value="p" checked>POST
 			<input type="radio" name="meth" id="methg" onclick="checkMeth()" value="g">GET<br>
