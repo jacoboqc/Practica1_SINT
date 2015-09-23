@@ -1,7 +1,7 @@
 <html>
 	<head>
 	 	<meta charset="UTF-8">
-		<title>p1.php</title>
+		<title>PHP</title>
 		<meta name="author" content="Jacobo Quintáns Castro">
 		<link rel="stylesheet" type="text/css" href="p1.css">
 	</head>
@@ -15,16 +15,26 @@
 			
 			function printVars ($field){
 				global $vars;
-			if($field=='sexo'){
-				if($vars[$field]=='m'){
-					$vars[$field]='Masculino';
-				}elseif($vars[$field]=='f'){
-					$vars[$field]='Femenino';
-				}else {$vars[$field]=NULL;}
-			}elseif($field=='mus'){
-				$musica=$vars[$field];
-			}
-			return	$vars[$field];
+				if(empty($vars[$field])){
+					$vars[$field]="Vacío";
+				}else{
+					if($field=='sexo'){
+						if($vars[$field]=='m'){
+							$vars[$field]='Masculino';
+						}elseif($vars[$field]=='f'){
+							$vars[$field]='Femenino';
+						}else {$vars[$field]=NULL;}
+					}elseif($field=='mus'){
+						$musica=$vars[$field];
+						foreach($musica as &$check){
+							$lista.=$check . ", ";
+						}
+					$lista=ucwords($lista);
+					$lista=rtrim($lista, ", ");
+					$vars[$field]=$lista;
+					}
+				}
+				return	$vars[$field];
 			}
 		?>
 		<table>
@@ -105,15 +115,15 @@
 					<td><?php echo $_SERVER["SERVER_ADDR"]; ?></td>
 				</tr>
 				<tr>
-					<td>Servidor</td>
+					<td>Puerto</td>
 					<td><?php echo $_SERVER["SERVER_PORT"]; ?></td>
 				</tr>
 				<tr>
-					<td>Metodo</td>
+					<td>Método</td>
 					<td><?php echo $_SERVER["REQUEST_METHOD"]; ?></td>
 				</tr>
 				<tr>
-					<td>Codificacion</td>
+					<td>Codificación</td>
 					<td><?php echo $_SERVER["CONTENT_TYPE"]; ?></td>
 				</tr>
 			</tbody>
