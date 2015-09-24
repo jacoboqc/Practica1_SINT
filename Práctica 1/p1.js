@@ -37,7 +37,7 @@ function toSubmit(){
 	getTime();
 	getBrowser();
 	var goRNot=true;
-	if(!mustMatch() || !terms()){
+	if(!mustMatch() || !terms() || !checkedMethEnc()){
 		goRNot=false;
 	}
 	return goRNot;
@@ -76,5 +76,22 @@ function getTime (){
 function getBrowser (){
 	
 	document.getElementById("naveg").value=navigator.appCodeName + navigator.appVersion;
+	
+}
+
+function checkedMethEnc (){
+	
+	var ret = true;
+	if(!document.getElementById("enca").checked
+	&& !document.getElementById("encm").checked){
+		alert("Debes seleccionar una encriptación");
+		ret = false;
+	}
+	if(!document.getElementById("php1").checked
+	&& !document.getElementById("phprof").checked){
+		alert("Debes seleccionar un destino");
+		ret = false;
+	}
+	return ret;
 	
 }
