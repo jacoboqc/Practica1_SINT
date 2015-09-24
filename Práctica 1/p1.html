@@ -1,24 +1,30 @@
 <html>
 	<head>
  		<meta charset="UTF-8">
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
 		<title>Formulario de registro</title>
 		<meta name="author" content="Jacobo Quintáns Castro">
 		<meta name="description" content="Formulario de registro de un nuevo usuario">
 		<script type="text/javascript" src="p1.js"></script>
 	</head>
 	<body>
-		<div align"center">
+		<div align="center">
+			<img src="music.jpg" style="width:304px;height:228px;">
 			<h1>Formulario de registro de nuevo usuario</h1>
 			Rellene los campos a continuación para formalizar su registro.<br>
 			<form value="form"  id="formulario" onSubmit="return toSubmit();">
 				Nombre<br>
-				<input type="text" name="nombre" pattern="^[a-zA-Z\s]+$"><font size="2"> (Letras sin símbolos)</font><br>
+				<input type="text" name="nombre" pattern="^[a-zA-Z\s]+$"><br>
+				<font size="2">(Letras sin símbolos)</font><br>
 				Apellidos<br>
-				<input type="text" name="apellidos" pattern="^[a-zA-Z\s]+$"><font size="2"> (Letras sin símbolos)</font><br>
+				<input type="text" name="apellidos" pattern="^[a-zA-Z\s]+$"><br>
+				<font size="2">(Letras sin símbolos)</font><br>
 				Teléfono<br>
-				<input type="text" name="telef" pattern="^[9|8|7|6]\d{8}$"><font size="2"> (Número de 9 cifras)</font><br>
+				<input type="text" name="telef" pattern="^[9|8|7|6]\d{8}$"><br>
+				<font size="2">(Número de 9 cifras)</font><br>
 				Correo electrónico<br>
-				<input type="text" name="email" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$"><font size="2"> (nombre@dominio.es)</font><br>
+				<input type="text" name="email" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$"><br>
+				<font size="2">(nombre@dominio.es)</font><br>
 				Contraseña<br>
 				<input type="password" name="pass" id="pass1"><br>
 				Vuelva a introducir su contraseña<br>
@@ -58,6 +64,10 @@
 				<input type="hidden" name="navegador" id="naveg">
 				<input type="submit" value="enviar">
 				<input type="reset" value="borrar">
+				<hr>
+				Práctica de la asignatura Servicios de Internet - Curso 2015/16<br>
+				Escuela de Ingeniería de Telecomunicación - Universidad de Vigo<br>
+				<a href="mailto:jaquintans@alumnos.uvigo.es">Contacto</a>
 			</form>
 		</div>	
 	</body>
