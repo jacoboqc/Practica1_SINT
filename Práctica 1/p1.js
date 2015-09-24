@@ -69,12 +69,7 @@ function getTime (){
 	if(mnts<10) {
 		mnts="0" + mnts;
 	}
-	var hora=hrs + ":" + mnts + " ";
-	if(hrs > 11){
-		hora=hora + "PM";
-	}else{
-		hora=hora + "AM";
-	}
+	var hora=hrs + ":" + mnts;
 	document.getElementById("hora").value=hora;
 }
 
