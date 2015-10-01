@@ -37,7 +37,7 @@ function toSubmit(){
 	getTime();
 	getBrowser();
 	var goRNot=true;
-	if(!patterns() || !mustMatch() || !terms() || !checkedMethEnc()){
+	if(!patterns() || !mustMatch() || !checkedMethEnc()){
 		goRNot=false;
 	}
 	return goRNot;
@@ -50,15 +50,6 @@ function mustMatch (){
 		alert("La contraseña no es idéntica");
 		return false;
 	}else{return true;}
-}
-
-function terms (){
-	
-	if(!document.getElementById("termns").checked){
-		alert("Debes leer y aceptar los términos y condiciones de uso");
-		return false;
-	}else{return true;}
-	
 }
 
 function getTime (){
