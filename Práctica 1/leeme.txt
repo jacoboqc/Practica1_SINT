@@ -1,0 +1,25 @@
+Práctica 1 de Servicios de Internet - Curso 2015/16
+
+Alumno: Jacobo Quintáns Castro
+
+
+
+-Implementación de la práctica:
+
+Ninguno de los campos del formulario es obligatorio
+
+Algunos de ellos han de cumplir el formato que se especifica
+
+El envio al servidor se hará de la forma que indique el usuario
+
+El servidor retornará una tabla que resuma los datos introducidos
+
+-Observaciones:
+
+Los únicos campos obligatorios son los de método, encriptación y destino del envío, por el mero hecho de poder llevar a cabo el mismo
+
+La contraseña no tiene restricción de formato, solo ha de coincidir
+
+
+
+Última edición: 20:42 02/10/2015
