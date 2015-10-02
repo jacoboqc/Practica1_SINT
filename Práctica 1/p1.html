@@ -9,9 +9,9 @@
 	</head>
 	<body>
 		<div align="center">
-			<img src="music.jpg" style="width:304px;height:228px;">
+			<img src="banner.jpg" style="width:304px;height:228px;">
 			<h1>Formulario de registro de nuevo usuario</h1>
-			Rellene los campos a continuación para formalizar su registro.<br>
+			Rellene los campos a continuación para formalizar su registro.<br><br>
 			<form value="form"  id="formulario" onSubmit="return toSubmit();">
 				Nombre<br>
 				<input type="text" name="nombre" id="nombre"><br>
@@ -34,6 +34,7 @@
 				<input type="radio" name="sexo" value="f">Mujer<br>
 				Edad<br>
 				<select name="edad">
+					<option hidden value=""></option>
 					<option value="18">18</option> 
 					<option value="19">19</option>
 					<option value="20">20</option>
