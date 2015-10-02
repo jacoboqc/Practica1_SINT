@@ -140,6 +140,11 @@
 					</tr>
 				</tbody>
 			</table>
+			<hr>
+			Práctica de la asignatura Servicios de Internet - Curso 2015/16<br>
+			Escuela de Ingeniería de Telecomunicación - Universidad de Vigo<br>
+			Alumno: Jacobo Quintáns Castro<br>
+			<a href="mailto:jaquintans@alumnos.uvigo.es">Contacto</a>
 		</div>
 	</body>
 </html>
