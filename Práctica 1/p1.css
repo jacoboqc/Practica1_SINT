@@ -1,7 +1,24 @@
-td, th {
-	border : 1px solid #999;
-	padding : 0.5rem;
+body{
+	background-image : url("background.jpg");
+	background-size : cover;
+}
+h1{
+	font-family : Verdana, Geneva, sans-serif;
 }
 table {
 	border-collapse : collapse;
+}
+td, th {
+	padding : 0.5rem;
+}
+th {
+    background-color : lightgray;
+    color : black;
+}
+td{
+	background-color : white; 
+}
+tr.alt td{
+	background-color : whitesmoke;
+    color : black;
 }
